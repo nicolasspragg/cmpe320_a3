@@ -1,0 +1,13 @@
+﻿  stdafx.cpp
+  dllmain.cpp
+  Fraction_DLL.cpp
+c:\users\nicolas\documents\fraction_dll\fraction_dll\fraction_dll.cpp(6): warning C4273: 'addFrac': inconsistent dll linkage
+  c:\users\nicolas\documents\fraction_dll\fraction_dll\fraction_dll.h(12): note: see previous definition of 'addFrac'
+c:\users\nicolas\documents\fraction_dll\fraction_dll\fraction_dll.cpp(16): warning C4273: 'subFrac': inconsistent dll linkage
+  c:\users\nicolas\documents\fraction_dll\fraction_dll\fraction_dll.h(13): note: see previous definition of 'subFrac'
+c:\users\nicolas\documents\fraction_dll\fraction_dll\fraction_dll.cpp(26): warning C4273: 'multFrac': inconsistent dll linkage
+  c:\users\nicolas\documents\fraction_dll\fraction_dll\fraction_dll.h(14): note: see previous definition of 'multFrac'
+c:\users\nicolas\documents\fraction_dll\fraction_dll\fraction_dll.cpp(36): warning C4273: 'divFrac': inconsistent dll linkage
+  c:\users\nicolas\documents\fraction_dll\fraction_dll\fraction_dll.h(15): note: see previous definition of 'divFrac'
+  Generating Code...
+  Fraction_DLL.vcxproj -> C:\Users\Nicolas\Documents\Fraction_DLL\Debug\Fraction_DLL.dll
