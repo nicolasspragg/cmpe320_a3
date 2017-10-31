@@ -7,6 +7,8 @@
 #include <iostream>
 #include <vector>
 #include <regex>
+#include <ctype.h>
+#include<locale>
 using namespace std;
 
 FRACDLL int* addFrac(int a0, int a1, int a2, int a3);

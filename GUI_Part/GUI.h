@@ -94,9 +94,11 @@ namespace GUIPart {
 			// LeftFractionTopBox
 			// 
 			this->LeftFractionTopBox->Location = System::Drawing::Point(55, 88);
+			this->LeftFractionTopBox->Multiline = true;
 			this->LeftFractionTopBox->Name = L"LeftFractionTopBox";
 			this->LeftFractionTopBox->Size = System::Drawing::Size(100, 20);
 			this->LeftFractionTopBox->TabIndex = 0;
+			this->LeftFractionTopBox->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &GUI::LeftFractionTopBox_KeyPress);
 			// 
 			// LeftFractionBottomBox
 			// 
@@ -104,6 +106,7 @@ namespace GUIPart {
 			this->LeftFractionBottomBox->Name = L"LeftFractionBottomBox";
 			this->LeftFractionBottomBox->Size = System::Drawing::Size(100, 20);
 			this->LeftFractionBottomBox->TabIndex = 1;
+			this->LeftFractionBottomBox->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &GUI::LeftFractionBottomBox_KeyPress);
 			// 
 			// RightFractionTopBox
 			// 
@@ -111,6 +114,7 @@ namespace GUIPart {
 			this->RightFractionTopBox->Name = L"RightFractionTopBox";
 			this->RightFractionTopBox->Size = System::Drawing::Size(100, 20);
 			this->RightFractionTopBox->TabIndex = 2;
+			this->RightFractionTopBox->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &GUI::RightFractionTopBox_KeyPress);
 			// 
 			// RighFractionBottomBox
 			// 
@@ -118,11 +122,13 @@ namespace GUIPart {
 			this->RighFractionBottomBox->Name = L"RighFractionBottomBox";
 			this->RighFractionBottomBox->Size = System::Drawing::Size(100, 20);
 			this->RighFractionBottomBox->TabIndex = 3;
+			this->RighFractionBottomBox->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &GUI::RighFractionBottomBox_KeyPress);
 			// 
 			// AnsTopBox
 			// 
 			this->AnsTopBox->Location = System::Drawing::Point(409, 88);
 			this->AnsTopBox->Name = L"AnsTopBox";
+			this->AnsTopBox->ReadOnly = true;
 			this->AnsTopBox->Size = System::Drawing::Size(100, 20);
 			this->AnsTopBox->TabIndex = 4;
 			// 
@@ -130,6 +136,7 @@ namespace GUIPart {
 			// 
 			this->AnsBottomBox->Location = System::Drawing::Point(409, 143);
 			this->AnsBottomBox->Name = L"AnsBottomBox";
+			this->AnsBottomBox->ReadOnly = true;
 			this->AnsBottomBox->Size = System::Drawing::Size(100, 20);
 			this->AnsBottomBox->TabIndex = 5;
 			// 
@@ -139,6 +146,7 @@ namespace GUIPart {
 			this->ADDBUTTON->Name = L"ADDBUTTON";
 			this->ADDBUTTON->Size = System::Drawing::Size(75, 23);
 			this->ADDBUTTON->TabIndex = 6;
+			this->ADDBUTTON->TabStop = false;
 			this->ADDBUTTON->Text = L"+";
 			this->ADDBUTTON->UseVisualStyleBackColor = true;
 			this->ADDBUTTON->Click += gcnew System::EventHandler(this, &GUI::ADDBUTTON_Click);
@@ -149,8 +157,10 @@ namespace GUIPart {
 			this->SUBTRACTBUTTON->Name = L"SUBTRACTBUTTON";
 			this->SUBTRACTBUTTON->Size = System::Drawing::Size(75, 23);
 			this->SUBTRACTBUTTON->TabIndex = 7;
+			this->SUBTRACTBUTTON->TabStop = false;
 			this->SUBTRACTBUTTON->Text = L"-";
 			this->SUBTRACTBUTTON->UseVisualStyleBackColor = true;
+			this->SUBTRACTBUTTON->Click += gcnew System::EventHandler(this, &GUI::SUBTRACTBUTTON_Click);
 			// 
 			// MULTBUTTON
 			// 
@@ -158,8 +168,10 @@ namespace GUIPart {
 			this->MULTBUTTON->Name = L"MULTBUTTON";
 			this->MULTBUTTON->Size = System::Drawing::Size(75, 23);
 			this->MULTBUTTON->TabIndex = 8;
+			this->MULTBUTTON->TabStop = false;
 			this->MULTBUTTON->Text = L"*";
 			this->MULTBUTTON->UseVisualStyleBackColor = true;
+			this->MULTBUTTON->Click += gcnew System::EventHandler(this, &GUI::MULTBUTTON_Click);
 			// 
 			// DIVISIONBUTTON
 			// 
@@ -167,8 +179,10 @@ namespace GUIPart {
 			this->DIVISIONBUTTON->Name = L"DIVISIONBUTTON";
 			this->DIVISIONBUTTON->Size = System::Drawing::Size(75, 23);
 			this->DIVISIONBUTTON->TabIndex = 9;
+			this->DIVISIONBUTTON->TabStop = false;
 			this->DIVISIONBUTTON->Text = L"/";
 			this->DIVISIONBUTTON->UseVisualStyleBackColor = true;
+			this->DIVISIONBUTTON->Click += gcnew System::EventHandler(this, &GUI::DIVISIONBUTTON_Click);
 			// 
 			// EQUALSBUTTON
 			// 
@@ -182,21 +196,24 @@ namespace GUIPart {
 			// 
 			// button6
 			// 
+			this->button6->DialogResult = System::Windows::Forms::DialogResult::Cancel;
 			this->button6->Location = System::Drawing::Point(477, 213);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(95, 36);
 			this->button6->TabIndex = 11;
 			this->button6->Text = L"Close";
 			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &GUI::button6_Click);
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
 			this->label1->Location = System::Drawing::Point(55, 40);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(325, 13);
+			this->label1->Size = System::Drawing::Size(483, 13);
 			this->label1->TabIndex = 12;
-			this->label1->Text = L"Enter in fractions, then click on the operation you want, then equals";
+			this->label1->Text = L"Enter in fraction(Number then negation if you want negative values), then operati"
+				L"on and then equals. ";
 			// 
 			// label2
 			// 
@@ -208,8 +225,10 @@ namespace GUIPart {
 			// 
 			// GUI
 			// 
+			this->AcceptButton = this->EQUALSBUTTON;
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->CancelButton = this->button6;
 			this->ClientSize = System::Drawing::Size(615, 327);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
@@ -225,8 +244,10 @@ namespace GUIPart {
 			this->Controls->Add(this->RightFractionTopBox);
 			this->Controls->Add(this->LeftFractionBottomBox);
 			this->Controls->Add(this->LeftFractionTopBox);
+			this->KeyPreview = true;
 			this->Name = L"GUI";
-			this->Text = L"GUI";
+			this->Text = L"12ns73 Fraction Calculator";
+			this->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &GUI::input_KeyDown);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -242,26 +263,216 @@ namespace GUIPart {
 		if (a0s =="" || a1s == "" || a2s ==  "" || a3s == "") {
 			//update the warning label
 			label2->Text = "Please fill in all fraction fields";
-		} 
-		else {
-			label2->Text = ""; 
 		}
+		else {
+			label2->Text = "";
+
 			int a0 = Int64::Parse(LeftFractionTopBox->Text);
 			int a1 = Int64::Parse(LeftFractionBottomBox->Text);
 			int a2 = Int64::Parse(RightFractionTopBox->Text);
 			int a3 = Int64::Parse(RighFractionBottomBox->Text);
 
-			temp = addFrac(a0, a1, a2, a3);
-
-
+			if (a1 == 0 || a3 == 0) {
+				label2->Text = "Fractions cannot have 0 denominator";
+			}
+			else {
+				label2->Text = "";
+				temp = addFrac(a0, a1, a2, a3);
+			}
+		}
+		
 			
-
 	}
+
+	
+
 	private: System::Void EQUALSBUTTON_Click(System::Object^  sender, System::EventArgs^  e) {
+		if (temp[0] == NULL || temp[1] == NULL) {
+			cout << "null";
+			label2->Text = "Null Values";
+		}
+		else {
 
-		AnsTopBox->Text = Convert::ToString(temp[0]);
-		AnsBottomBox->Text = Convert::ToString(temp[1]);
+
+			cout << temp[0];
+			cout << temp[1];
+			if (temp[0] == 0) {
+				AnsTopBox->Text = Convert::ToString(temp[0]);
+				AnsBottomBox->Text = "";
+			}
+			else if (temp[1] == 1) {
+				AnsTopBox->Text = Convert::ToString(temp[0]);
+				AnsBottomBox->Text = "";
+			}
+			else {
+				AnsTopBox->Text = Convert::ToString(temp[0]);
+				AnsBottomBox->Text = Convert::ToString(temp[1]);
+			}
+
+		}
+		
+		
+	}
+
+			 private: System::Void input_KeyDown(System::Object^ sender, KeyEventArgs^ e){
+				
+				 if (e->Modifiers == Keys::Alt && e->KeyCode == Keys::C) {
+					 Close();
+				} 
+				
+				
+			 }
+
+
+
+private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e) {
+	Close();
+}
+private: System::Void SUBTRACTBUTTON_Click(System::Object^  sender, System::EventArgs^  e) {
+	String^ a0s = LeftFractionTopBox->Text;
+	String^ a1s = LeftFractionBottomBox->Text;
+	String^ a2s = RightFractionTopBox->Text;
+	String^ a3s = RighFractionBottomBox->Text;
+	if (a0s == "" || a1s == "" || a2s == "" || a3s == "") {
+		//update the warning label
+		label2->Text = "Please fill in all fraction fields";
+	
+	}
+	else {
+		label2->Text = "";
+
+		int a0 = Int64::Parse(LeftFractionTopBox->Text);
+		int a1 = Int64::Parse(LeftFractionBottomBox->Text);
+		int a2 = Int64::Parse(RightFractionTopBox->Text);
+		int a3 = Int64::Parse(RighFractionBottomBox->Text);
+
+		if (a1 == 0 || a3 == 0) {
+			label2->Text = "Fractions cannot have 0 denominator";
+		}
+		else {
+			temp = subFrac(a0, a1, a2, a3);
+		}
+	}
+}
+private: System::Void MULTBUTTON_Click(System::Object^  sender, System::EventArgs^  e) {
+	String^ a0s = LeftFractionTopBox->Text;
+	String^ a1s = LeftFractionBottomBox->Text;
+	String^ a2s = RightFractionTopBox->Text;
+	String^ a3s = RighFractionBottomBox->Text;
+	if (a0s == "" || a1s == "" || a2s == "" || a3s == "") {
+		//update the warning label
+		label2->Text = "Please fill in all fraction fields";
 
 	}
+	else {
+		label2->Text = "";
+
+		int a0 = Int64::Parse(LeftFractionTopBox->Text);
+		int a1 = Int64::Parse(LeftFractionBottomBox->Text);
+		int a2 = Int64::Parse(RightFractionTopBox->Text);
+		int a3 = Int64::Parse(RighFractionBottomBox->Text);
+
+		if (a1 == 0 || a3 == 0) {
+			label2->Text = "Fractions cannot have 0 denominator";
+		}
+		else {
+			temp = multFrac(a0, a1, a2, a3);
+		}
+	}
+
+}
+private: System::Void DIVISIONBUTTON_Click(System::Object^  sender, System::EventArgs^  e) {
+	String^ a0s = LeftFractionTopBox->Text;
+	String^ a1s = LeftFractionBottomBox->Text;
+	String^ a2s = RightFractionTopBox->Text;
+	String^ a3s = RighFractionBottomBox->Text;
+	if (a0s == "" || a1s == "" || a2s == "" || a3s == "") {
+		//update the warning label
+		label2->Text = "Please fill in all fraction fields";
+
+	}
+	else {
+		label2->Text = "";
+
+		int a0 = Int64::Parse(LeftFractionTopBox->Text);
+		int a1 = Int64::Parse(LeftFractionBottomBox->Text);
+		int a2 = Int64::Parse(RightFractionTopBox->Text);
+		int a3 = Int64::Parse(RighFractionBottomBox->Text);
+
+		if (a1 == 0 || a3 == 0) {
+			label2->Text = "Fractions cannot have 0 denominator";
+		}
+		else {
+			temp = divFrac(a0, a1, a2, a3);
+		}
+	}
+}
+
+	private: System::Void LeftFractionTopBox_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {  
+		if (e->KeyChar == '.') {
+			if (this->LeftFractionTopBox->Text->Contains(".") && !this->LeftFractionTopBox->SelectedText->Contains("."))
+				e->Handled = true;
+		}
+		// Allow negative numbers
+		else if (e->KeyChar == '-' && !(this->LeftFractionTopBox->Text->Contains("-"))) {
+			e->Handled = true;
+			LeftFractionTopBox->Text = "-" + LeftFractionTopBox->Text;
+		}
+		// Accept only digits ".", "-" and the Backspace character
+		else if (!Char::IsDigit(e->KeyChar) && e->KeyChar != 0x08) {
+			e->Handled = true;
+		}
+
+	
+	}
+
+
+private: System::Void LeftFractionBottomBox_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
+	if (e->KeyChar == '.') {
+		if (this->LeftFractionBottomBox->Text->Contains(".") && !this->LeftFractionBottomBox->SelectedText->Contains("."))
+			e->Handled = true;
+	}
+	// Allow negative numbers
+	else if (e->KeyChar == '-' && !(this->LeftFractionBottomBox->Text->Contains("-"))) {
+		e->Handled = true;
+		LeftFractionBottomBox->Text = "-" + LeftFractionBottomBox->Text;
+	}
+	// Accept only digits ".", "-" and the Backspace character
+	else if (!Char::IsDigit(e->KeyChar) && e->KeyChar != 0x08) {
+		e->Handled = true;
+	}
+
+}
+private: System::Void RightFractionTopBox_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
+	if (e->KeyChar == '.') {
+		if (this->RightFractionTopBox->Text->Contains(".") && !this->RightFractionTopBox->SelectedText->Contains("."))
+			e->Handled = true;
+	}
+	// Allow negative numbers
+	else if (e->KeyChar == '-' && !(this->RightFractionTopBox->Text->Contains("-"))) {
+		e->Handled = true;
+		RightFractionTopBox->Text = "-" + RightFractionTopBox->Text;
+	}
+	// Accept only digits ".", "-" and the Backspace character
+	else if (!Char::IsDigit(e->KeyChar) && e->KeyChar != 0x08) {
+		e->Handled = true;
+	}
+}
+
+private: System::Void RighFractionBottomBox_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
+	if (e->KeyChar == '.') {
+		if (this->RighFractionBottomBox->Text->Contains(".") && !this->RighFractionBottomBox->SelectedText->Contains("."))
+			e->Handled = true;
+	}
+	// Allow negative numbers
+	else if (e->KeyChar == '-' && !(this->RighFractionBottomBox->Text->Contains("-"))) {
+		e->Handled = true;
+		RighFractionBottomBox->Text = "-" + RighFractionBottomBox->Text;
+	}
+	// Accept only digits ".", "-" and the Backspace character
+	else if (!Char::IsDigit(e->KeyChar) && e->KeyChar != 0x08) {
+		e->Handled = true;
+	}
+}
 };
 };

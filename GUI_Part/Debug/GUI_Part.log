@@ -1,6 +1,18 @@
 ﻿  GUI.cpp
-c:\users\nicolas\documents\fraction_dll\gui_part\GUI.h(249): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
-c:\users\nicolas\documents\fraction_dll\gui_part\GUI.h(250): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
-c:\users\nicolas\documents\fraction_dll\gui_part\GUI.h(251): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
-c:\users\nicolas\documents\fraction_dll\gui_part\GUI.h(252): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+c:\users\nicolas\documents\fraction_dll\gui_part\GUI.h(270): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+c:\users\nicolas\documents\fraction_dll\gui_part\GUI.h(271): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+c:\users\nicolas\documents\fraction_dll\gui_part\GUI.h(272): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+c:\users\nicolas\documents\fraction_dll\gui_part\GUI.h(273): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+c:\users\nicolas\documents\fraction_dll\gui_part\GUI.h(348): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+c:\users\nicolas\documents\fraction_dll\gui_part\GUI.h(349): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+c:\users\nicolas\documents\fraction_dll\gui_part\GUI.h(350): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+c:\users\nicolas\documents\fraction_dll\gui_part\GUI.h(351): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+c:\users\nicolas\documents\fraction_dll\gui_part\GUI.h(374): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+c:\users\nicolas\documents\fraction_dll\gui_part\GUI.h(375): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+c:\users\nicolas\documents\fraction_dll\gui_part\GUI.h(376): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+c:\users\nicolas\documents\fraction_dll\gui_part\GUI.h(377): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+c:\users\nicolas\documents\fraction_dll\gui_part\GUI.h(401): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+c:\users\nicolas\documents\fraction_dll\gui_part\GUI.h(402): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+c:\users\nicolas\documents\fraction_dll\gui_part\GUI.h(403): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+c:\users\nicolas\documents\fraction_dll\gui_part\GUI.h(404): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
   GUI_Part.vcxproj -> C:\Users\Nicolas\Documents\Fraction_DLL\Debug\GUI_Part.exe
